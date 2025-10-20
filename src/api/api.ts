@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { FetchFoodData } from '../App';
+import type { Place } from '../store/allFoodStore';
 
 export const instance = axios.create({
   baseURL: 'http://localhost:3000',
@@ -9,7 +9,11 @@ export const instance = axios.create({
   },
 });
 
-export async function getFoodList(): Promise<FetchFoodData> {
+interface FetchData {
+  places: Place[];
+}
+
+export async function getFoodList(): Promise<FetchData> {
   try {
     const response = await instance.get('/places');
     console.log('✅ 전체 맛집 조회 성공:', response.data);
