@@ -3,19 +3,26 @@
 
 @font-face {
   font-family: 'Esamanru-Bold';
-  src: url('./fonts/esamanru OTF Bold.otf');
+  src: url('./fonts/esamanru OTF Bold.woff2') format('woff2');
+  font-display: swap;
+  /* swap 폰트 로드 되기 전까지 기본폰트로 먼저 표시 */
 }
 @font-face {
   font-family: 'Esamanru-Light';
-  src: url('./fonts/esamanru OTF Light.otf');
+  src: url('./fonts/esamanru OTF Light.woff2') format('woff2');
+  font-display: swap;
+  /* swap 폰트 로드 되기 전까지 기본폰트로 먼저 표시 */
 }
 @font-face {
   font-family: 'Esamanru-Medium';
-  src: url('./fonts/esamanru OTF Medium.otf');
+  src: url('./fonts/esamanru OTF Medium.woff2') format('woff2');
+  font-display: swap;
+  /* swap 폰트 로드 되기 전까지 기본폰트로 먼저 표시 */
 }
+
 @custom-variant dark (&:is(.dark *));
 body {
-  font-family: 'Esamanru-Medium', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: var(--font-Esamanru-Medium);
 }
 
 :root {
@@ -191,12 +198,7 @@ button:focus-visible {
   }
 }
 @theme {
-  --font-Esamanru-Bold:
-    Esamanru-Bold, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-    'Noto Color Emoji';
-  --font-Esamanru-Light: Esamanru-Light, Georgia, Cambria, 'Times New Roman', Times, serif;
-  --font-Esamanru-Medium:
-    Esamanru-Medium, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
-    monospace;
-  /* ... */
+  --font-Esamanru-Bold: Esamanru-Bold, system-ui, sans-serif;
+  --font-Esamanru-Light: Esamanru-Light, system-ui, sans-serif;
+  --font-Esamanru-Medium: Esamanru-Medium, system-ui, sans-serif;
 }

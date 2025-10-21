@@ -4,7 +4,7 @@ import type { Place } from '../store/allFoodStore';
 export const BASE_URL = 'http://localhost:3000';
 export const instance = axios.create({
   baseURL: BASE_URL,
-  timeout: 5000, // 요청 타임아웃 (5초뒤에 요청 중단해주세요.)
+  timeout: 10000, // 요청 타임아웃 (5초뒤에 요청 중단해주세요.)
   headers: {
     'Content-Type': 'application/json',
   },

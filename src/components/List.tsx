@@ -18,8 +18,10 @@ export default function List({ title, type }: ListProps) {
   useEffect(() => {
     fetchPlaces();
   }, [fetchPlaces]);
+
   //전달받은 데이터의 타입에 따라 보여줄 데이터 결정
   const data = type === 'ALL' ? places : undefined;
+  
   if (loading) {
     return (
       <div>

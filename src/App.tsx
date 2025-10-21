@@ -7,7 +7,7 @@ const List = React.lazy(() => import('./components/List'));
 
 function App() {
   return (
-    <div className=" flex flex-col justify-center items-center mx-auto border border-red-400 gap-5">
+    <div className=" flex flex-col justify-center items-center mx-auto  gap-5">
       <main className="py-3 px-5 ">
         <Suspense fallback={<Loading></Loading>}>
           <Header></Header>

@@ -15,7 +15,6 @@ export interface Place {
 }
 
 //2. 상태관리의 타입정의
-//! 로딩과 에러처리 진행
 interface PlaceState {
   places: Place[]; // 처음 초기 상태
   loading: boolean;
@@ -25,11 +24,7 @@ interface PlaceState {
 }
 
 //3. create 로 zustand 저장소 만들기
-//- store네이밍컨벤션 : use로 시작함
-//- 리턴함수 반환값 타입은 PlaceState 인터페이스 사용
-//- export const usePlaceState = create<PlaceState>(()=>({}));
 export const usePlaceState = create<PlaceState>((set) => ({
-  //객체타입으로 배열에 끼워넣을 거니깐
   places: [],
   loading: false,
   error: null,
