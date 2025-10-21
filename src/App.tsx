@@ -1,28 +1,19 @@
-import { useEffect } from 'react';
-import { getFoodList } from './api/api';
-import Favorite from './components/Favorite';
+import React, { Suspense } from 'react';
 import Header from './components/Header';
-import List from './components/List';
-import { usePlaceState } from './store/allFoodStore';
+import Loading from './components/Loading';
+
+//로딩창 구현 lazy,suspense fallback
+const List = React.lazy(() => import('./components/List'));
 
 function App() {
-  //맛집목록 전체 조회
-  const { places, setPlaces } = usePlaceState();
-  useEffect(() => {
-    //비동기로 불러오기
-    const fetchData = async () => {
-      const data = await getFoodList();
-      setPlaces(data.places);
-    };
-    fetchData();
-  }, []);
-  console.log('fetchData:', places);
   return (
-    <div className="border-4  mx-auto my-0 ">
-      <main className="border-amber-300 border-2 justify-center flex items-center flex-col py-3 px-5 ">
-        <Header></Header>
-        <Favorite></Favorite>
-        <List></List>
+    <div className=" flex flex-col justify-center items-center mx-auto border border-red-400 gap-5">
+      <main className="py-3 px-5 ">
+        <Suspense fallback={<Loading></Loading>}>
+          <Header></Header>
+          <List title={'찜한 맛집'} type="FAVORITE"></List>
+          <List title={'맛집 리스트'} type="ALL"></List>
+        </Suspense>
       </main>
     </div>
   );
