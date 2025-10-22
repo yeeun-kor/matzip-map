@@ -21,7 +21,7 @@ export default function List({ title, type }: ListProps) {
 
   //전달받은 데이터의 타입에 따라 보여줄 데이터 결정
   const data = type === 'ALL' ? places : undefined;
-  
+
   if (loading) {
     return (
       <div>
@@ -40,7 +40,9 @@ export default function List({ title, type }: ListProps) {
       {data ? (
         <Card data={data}></Card>
       ) : (
-        <div className="p-10 text-center text-gray-500 text-xl">찜한 맛집이 아직 없어요 😢</div>
+        <div className="p-10 text-center text-gray-500 text-xl font-Esamanru-Light">
+          찜한 맛집이 아직 없어요 😢
+        </div>
       )}
     </section>
   );
