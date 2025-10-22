@@ -18,8 +18,8 @@ export default function Card({ data }: CardProps) {
                 src={`${BASE_URL}/${place.image.src}`}
                 className="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-50 xl:aspect-7/8"
               />
-              <h3 className="mt-4 text-sm text-gray-700 font-Esamanru-Light">{place.title}</h3>
-              <p className="mt-1 text-lg font-Esamanru-Light text-gray-900">{place.description}</p>
+              <h3 className="mt-4 text-sm text-gray-700 ">{place.title}</h3>
+              <p className="mt-1 text-lg  text-gray-900">{place.description}</p>
             </a>
           ))}
         </div>
