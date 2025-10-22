@@ -28,13 +28,13 @@ export default function List({ title, type }: ListProps) {
   }
   return (
     <section className="my-3 border-4 rounded-2xl border-orange-400 items-center gap-3 flex flex-col p-3 justify-center ">
-      <h2 className="text-3xl font-Esamanru-Bold">{title}</h2>
+      <h2 className="text-3xl font-semibold py-4">{title}</h2>
 
       {/* data 찜한 맛집과 전체맛집 컴포넌트 분리 */}
       {data ? (
         <Card data={data}></Card>
       ) : (
-        <div className="p-10 text-center text-gray-500 text-xl font-Esamanru-Light">
+        <div className="p-10 text-center text-gray-500 text-2xl font-medium">
           찜한 맛집이 아직 없어요 😢
         </div>
       )}

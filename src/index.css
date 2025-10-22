@@ -1,39 +1,159 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+/* gothic-a1-korean-100-normal */
 @font-face {
-  font-family: 'Esamanru-Bold';
-  src: url('./fonts/EsamanruBold-subset.woff') format('woff');
-  src: url('./fonts/EsamanruBold-subset.woff2') format('woff2');
+  font-family: 'Gothic A1';
+  font-style: normal;
   font-display: swap;
-  /* swap 폰트 로드 되기 전까지 기본폰트로 먼저 표시 */
+  font-weight: 100;
+  src:
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-100-normal.woff2)
+      format('woff2'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-100-normal.woff)
+      format('woff'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-100-normal.ttf)
+      format('truetype');
 }
+
+/* gothic-a1-korean-200-normal */
 @font-face {
-  font-family: 'Esamanru-Light';
-  src: url('./fonts/EsamanruLight-subset.woff') format('woff');
-  src: url('./fonts/EsamanruLight-subset.woff2') format('woff2');
+  font-family: 'Gothic A1';
+  font-style: normal;
   font-display: swap;
-  /* swap 폰트 로드 되기 전까지 기본폰트로 먼저 표시 */
+  font-weight: 200;
+  src:
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-200-normal.woff2)
+      format('woff2'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-200-normal.woff)
+      format('woff'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-200-normal.ttf)
+      format('truetype');
 }
+
+/* gothic-a1-korean-300-normal */
 @font-face {
-  font-family: 'Esamanru-Medium';
-  src: url('./fonts/EsamanruMedium-subset.woff') format('woff');
-  src: url('./fonts/EsamanruMedium-subset.woff2') format('woff2');
+  font-family: 'Gothic A1';
+  font-style: normal;
   font-display: swap;
-  /* swap 폰트 로드 되기 전까지 기본폰트로 먼저 표시 */
+  font-weight: 300;
+  src:
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-300-normal.woff2)
+      format('woff2'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-300-normal.woff)
+      format('woff'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-300-normal.ttf)
+      format('truetype');
+}
+
+/* gothic-a1-korean-400-normal */
+@font-face {
+  font-family: 'Gothic A1';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-400-normal.woff2)
+      format('woff2'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-400-normal.woff)
+      format('woff'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-400-normal.ttf)
+      format('truetype');
+}
+
+/* gothic-a1-korean-500-normal */
+@font-face {
+  font-family: 'Gothic A1';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src:
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-500-normal.woff2)
+      format('woff2'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-500-normal.woff)
+      format('woff'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-500-normal.ttf)
+      format('truetype');
+}
+
+/* gothic-a1-korean-600-normal */
+@font-face {
+  font-family: 'Gothic A1';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src:
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-600-normal.woff2)
+      format('woff2'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-600-normal.woff)
+      format('woff'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-600-normal.ttf)
+      format('truetype');
+}
+
+/* gothic-a1-korean-700-normal */
+@font-face {
+  font-family: 'Gothic A1';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-700-normal.woff2)
+      format('woff2'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-700-normal.woff)
+      format('woff'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-700-normal.ttf)
+      format('truetype');
+}
+
+/* gothic-a1-korean-800-normal */
+@font-face {
+  font-family: 'Gothic A1';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src:
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-800-normal.woff2)
+      format('woff2'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-800-normal.woff)
+      format('woff'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-800-normal.ttf)
+      format('truetype');
+}
+
+/* gothic-a1-korean-900-normal */
+@font-face {
+  font-family: 'Gothic A1';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src:
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-900-normal.woff2)
+      format('woff2'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-900-normal.woff)
+      format('woff'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/gothic-a1@latest/korean-900-normal.ttf)
+      format('truetype');
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Gothic A1', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -183,24 +303,4 @@ button:focus-visible {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-    font-family: var(--font-Esamanru-Medium);
-    line-height: 1.5;
-    font-weight: 500;
-    letter-spacing: 0.15px; /* 폴백 대비 조정 */
-    word-spacing: -1.4px;
-  }
-}
-
-@theme {
-  --font-Esamanru-Bold: Esamanru-Bold, 'Helvetica Neue', Arial, sans-serif;
-  --font-Esamanru-Light: Esamanru-Light, 'Helvetica Neue', Arial, sans-serif;
-  --font-Esamanru-Medium: Esamanru-Medium, 'Helvetica Neue', Arial, sans-serif;
 }

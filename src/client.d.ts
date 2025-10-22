@@ -3,3 +3,8 @@ declare module '*.svg' {
   const src: string;
   export default src;
 }
+
+// d.ts
+declare module '*.css';
+declare module '@fontsource/*' {}
+declare module '@fontsource-variable/*' {}
