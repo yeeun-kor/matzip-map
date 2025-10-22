@@ -3,7 +3,7 @@ export default function Header() {
   return (
     <header className="flex flex-col justify-center gap-3 items-center">
       <Taco></Taco>
-      <h1 className="text-3xl font-bold">오늘 뭐먹지?</h1>
+      <h1 className="text-5xl font-bold">맛집 뿌셔뿌셔</h1>
     </header>
   );
 }
