@@ -19,28 +19,29 @@ interface PlaceState {
   places: Place[]; // 처음 초기 상태
   loading: boolean;
   error: string | null;
-  fetchPlaces: () => Promise<void>;
   setPlaces: (places: Place[]) => void; // 상태 업데이트 함수
 }
 
 //3. create 로 zustand 저장소 만들기
-export const usePlaceState = create<PlaceState>((set) => ({
-  places: [],
-  loading: false,
-  error: null,
-  setPlaces(places) {
-    set({ places });
-  },
-
-  //에러와 로딩까지 포함한 비동기처리
-  fetchPlaces: async () => {
-    //데이터 성공
-    set({ loading: true, error: null });
+export const usePlaceState = create<PlaceState>((set) => {
+  const fetchPlaces = async () => {
     try {
       const res = await getFoodList();
       set({ places: res.places, loading: false });
     } catch (error: unknown) {
       if (error instanceof Error) set({ loading: false, error: error.message });
     }
-  },
-}));
+  };
+
+  // ✅ store 생성 시 자동 데이터 로드
+  fetchPlaces();
+
+  return {
+    places: [],
+    loading: true,
+    error: null,
+    setPlaces(places) {
+      set({ places });
+    },
+  };
+});

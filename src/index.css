@@ -3,27 +3,27 @@
 
 @font-face {
   font-family: 'Esamanru-Bold';
-  src: url('./fonts/esamanru OTF Bold.woff2') format('woff2');
+  src: url('./fonts/EsamanruBold-subset.woff') format('woff');
+  src: url('./fonts/EsamanruBold-subset.woff2') format('woff2');
   font-display: swap;
   /* swap 폰트 로드 되기 전까지 기본폰트로 먼저 표시 */
 }
 @font-face {
   font-family: 'Esamanru-Light';
-  src: url('./fonts/esamanru OTF Light.woff2') format('woff2');
+  src: url('./fonts/EsamanruLight-subset.woff') format('woff');
+  src: url('./fonts/EsamanruLight-subset.woff2') format('woff2');
   font-display: swap;
   /* swap 폰트 로드 되기 전까지 기본폰트로 먼저 표시 */
 }
 @font-face {
   font-family: 'Esamanru-Medium';
-  src: url('./fonts/esamanru OTF Medium.woff2') format('woff2');
+  src: url('./fonts/EsamanruMedium-subset.woff') format('woff');
+  src: url('./fonts/EsamanruMedium-subset.woff2') format('woff2');
   font-display: swap;
   /* swap 폰트 로드 되기 전까지 기본폰트로 먼저 표시 */
 }
 
 @custom-variant dark (&:is(.dark *));
-body {
-  font-family: var(--font-Esamanru-Medium);
-}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -70,10 +70,6 @@ body {
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-}
-
-body {
-  background-color: var(--card);
 }
 
 a {
@@ -195,10 +191,12 @@ button:focus-visible {
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-Esamanru-Medium);
   }
 }
+
 @theme {
-  --font-Esamanru-Bold: Esamanru-Bold, system-ui, sans-serif;
-  --font-Esamanru-Light: Esamanru-Light, system-ui, sans-serif;
-  --font-Esamanru-Medium: Esamanru-Medium, system-ui, sans-serif;
+  --font-Esamanru-Bold: Esamanru-Bold, sans-serif;
+  --font-Esamanru-Light: Esamanru-Light, sans-serif;
+  --font-Esamanru-Medium: Esamanru-Medium, sans-serif;
 }
