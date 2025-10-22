@@ -192,11 +192,15 @@ button:focus-visible {
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-Esamanru-Medium);
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.15px; /* 폴백 대비 조정 */
+    word-spacing: -1.4px;
   }
 }
 
 @theme {
-  --font-Esamanru-Bold: Esamanru-Bold, sans-serif;
-  --font-Esamanru-Light: Esamanru-Light, sans-serif;
-  --font-Esamanru-Medium: Esamanru-Medium, sans-serif;
+  --font-Esamanru-Bold: Esamanru-Bold, 'Helvetica Neue', Arial, sans-serif;
+  --font-Esamanru-Light: Esamanru-Light, 'Helvetica Neue', Arial, sans-serif;
+  --font-Esamanru-Medium: Esamanru-Medium, 'Helvetica Neue', Arial, sans-serif;
 }
