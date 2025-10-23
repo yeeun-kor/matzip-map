@@ -3,8 +3,6 @@ import Header from './components/Header';
 import Loading from './components/Loading';
 import { usePlaceState, type Place } from './store/allFoodStore.ts';
 import { sortPlacesByDistance } from './utils/loc.ts';
-
-//로딩창 구현 lazy,suspense fallback
 const List = React.lazy(() => import('./components/List'));
 
 type Position = {
@@ -14,7 +12,7 @@ type Position = {
 
 function App() {
   //zustand로 places객체 상태 데이터 가져오기
-  const { places, setPlaces } = usePlaceState();
+  const { places } = usePlaceState();
   //상태관리
 
   const [position, setPosition] = useState<Position | null>(null);
