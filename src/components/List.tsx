@@ -10,7 +10,7 @@ type ListProps = {
 
 export default function List({ title, type, props }: ListProps) {
   //Zustand 상태관리
-  const { places, loading, error } = usePlaceState();
+  const { loading, error } = usePlaceState();
 
   //전달받은 데이터의 타입에 따라 보여줄 데이터 결정
   const data = type === 'ALL' ? props : undefined;
