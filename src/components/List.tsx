@@ -1,18 +1,19 @@
-import { usePlaceState } from '@/store/allFoodStore';
+import { usePlaceState, type Place } from '@/store/allFoodStore';
 import Card from './Card';
 import NotFound from './NotFound';
 
 type ListProps = {
   title: string;
   type: 'ALL' | 'FAVORITE';
+  props: Place[];
 };
 
-export default function List({ title, type }: ListProps) {
+export default function List({ title, type, props }: ListProps) {
   //Zustand 상태관리
   const { places, loading, error } = usePlaceState();
 
   //전달받은 데이터의 타입에 따라 보여줄 데이터 결정
-  const data = type === 'ALL' ? places : undefined;
+  const data = type === 'ALL' ? props : undefined;
 
   //상태관리에서 넘어온 로딩화면
   if (loading) {
